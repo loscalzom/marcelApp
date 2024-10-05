@@ -12,7 +12,17 @@ export const data =
             id: 3,
             workspaceTitle: "buenas",},
 
-
+            {
+                id: 4,
+                workspaceTitle: "hola",},
+                
+                {
+                    id: 4,
+                    workspaceTitle: "chau",},
+                    
+                    {
+                        id: 6,
+                        workspaceTitle: "buenas",},
             
 
 ]
