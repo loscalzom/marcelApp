@@ -1,5 +1,5 @@
 *{font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;  color: darkslategray;background-color: mediumturquoise;}
-.body{background-color: darkseagreen;display: flex;flex-direction: column;justify-content: center;align-items: center;}
+
 h1,h2{background-color:lightblue;font-size: 20px}   
 h3{background-color:lightblue;font-size: 15px;height: 50vh;display: flex;flex-direction: column;justify-content: flex-start;font-size: 25px;align-items: center;overflow-y: auto;}
 .scroll-container{overflow-y: auto;scrollbar-color: rgb(82, 83, 83) rgb(132, 211, 239);scroll-padding: 20px;height: 60vh;background-color: lightblue;}

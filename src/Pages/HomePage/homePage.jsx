@@ -1,8 +1,17 @@
 import React from 'react'
 import "./homePage.css"
 import WorkspacesListRender from '../../Components/WorkspacesListRender'
+import { useNavigate } from 'react-router-dom';
+
 
 const HomePage = () => {
+  const navigate = useNavigate();
+
+  const handleButtonClick = () => {
+    navigate('/createWorkspace')
+  }
+
+
   return (
 
     <div className='container homePageContainer'>
@@ -13,7 +22,7 @@ const HomePage = () => {
         <h3><WorkspacesListRender /></h3>
         
 </div>
-<button className='button create'>Crear entorno</button>
+<button  onClick={handleButtonClick} className='button create'>Crear entorno</button>
       </div>
     </div>
 
