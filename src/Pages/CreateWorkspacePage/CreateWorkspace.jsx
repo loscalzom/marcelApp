@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
 import './createWorkspace.css'
-import { crearWorkspace, obtenerWorkspaces } from '../../data'
-import {  useNavigate } from 'react-router-dom'
+import { createWorkspace, getWorkspaces } from '../../data'
+import { useNavigate } from 'react-router-dom'
 
 
 const CreateWorkspacePage = () => {
 
   const [error, setError] = useState({ text: "", isError: false })
-const navigate=useNavigate()
+  const navigate = useNavigate()
 
   const handleSubmit = (evento) => {
 
@@ -19,24 +19,20 @@ const navigate=useNavigate()
     if (workspace.length < 4 || workspace.length > 20) {
       setError({ text: "El nombre del entorno debe tener entre 4 y 20 caracteres", isError: true })
     } else {
-      setError({ text: "", isError: false }) 
+      setError({ text: "", isError: false })
 
-const nuevoWorkspace= {workspaceTitle: workspace, }
+      const nuevoWorkspace = { workspaceTitle: workspace }
 
-crearWorkspace(nuevoWorkspace)
-obtenerWorkspaces()
-
-      
-    navigate('/')
+      createWorkspace(nuevoWorkspace)
+      getWorkspaces()
+      navigate('/')
     }
 
   }
   const handleCancel = (evento) => {
     evento.preventDefault()
     navigate('/')
-
   }
-
 
   return (
     <div className='container createWorspaceContainer'>
@@ -49,15 +45,12 @@ obtenerWorkspaces()
         {error.isError && <p>{error.text}</p>}
 
 
-        <input type="text" placeholder='Entre 4 y 20 caracteres' name="workspace" /><br />
+        <input type="text" placeholder='Entre 4 y 20 caracteres' name="workspace" id='workspaceTitle' /><br />
 
         <button className='button'>Crear</button>
-       <button type='button' className='button' onClick={handleCancel} ><a href='/'>Cancelar</a></button>
-
-
+        <button type='button' className='button' onClick={handleCancel} ><a  href='/'>Cancelar</a></button>
 
       </form>
-
 
     </div>
   )

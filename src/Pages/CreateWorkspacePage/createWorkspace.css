@@ -3,7 +3,22 @@
 h2{background-color:lightblue;font-size: 20px}   
 .container{display: flex; flex-direction: column; align-items: center; margin: auto; background-color: lightblue;height: 90vh;border-radius: 30px;max-width: 1000px;margin-top:30px ;}
 form{background-color: lightblue; display: flex;flex-direction: column; align-items: center;height: 80vh;}
-label{margin-top: 50px;border-radius: 5px;padding: 4px;}
+label{margin-top: 50px;border-radius: 5px;padding: 4px;width: auto;}
 input{margin-top: 10px;border-radius: 5px;padding: 4px;border: none;}
 button{background-color: lightblue; border: 1px solid rgb(5, 97, 42); border-radius: 10px; padding: 5px 20px; margin-top: 10px; margin-bottom: 10px;position: relative;bottom: -10px ;}
 button:hover{background-color: darkseagreen;}
+a {text-decoration: none;}
+
+@media (max-width: 320px) {
+    .createWorkspaceContainer {
+      width: 200px;
+    }
+
+    h2{font-size: 10px;}
+  }
+  
+  @media (min-width: 321px) {
+    .createWorkspaceContainer {
+        width: 315px;
+      }
+  }

@@ -1,18 +1,23 @@
 import React from 'react'
-import { obtenerWorkspaces  } from '../data'
+import { getWorkspaces  } from '../data'
 import { Link } from 'react-router-dom'
+
 
 const WorkspacesListRender = (id,workspaceTitle) =>     {
 
-const workspaces= obtenerWorkspaces()
+const workspaces= getWorkspaces()
       
 const workspaceList= workspaces.map(({id,workspaceTitle}) => 
 <li key={id} className='workspaceList'>
  {workspaceTitle}
-<button  className='button enter'>Entrar</button>
+
+<Link className='button enter' to={`/workspace/${id}`}>Entrar</Link>
+
+
+
   </li> )
 return workspaceList
     
 }
-  
+
 export default WorkspacesListRender
