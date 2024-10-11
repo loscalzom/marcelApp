@@ -68,10 +68,11 @@ aside {
     border-radius: 10px;
     margin-left: 10px;
     border-radius: 10px;
+    box-shadow: 10px 10px 5px rgb(5, 97, 42, 0.3);
 }
 
 .channels {
-    background-color: rgb(230, 173, 173);
+    background-color: lightblue;
     font-size: 2vh;
     height: 50vh;
     width: 100%;
@@ -81,7 +82,7 @@ aside {
 }
 
 .channel {
-    background-color: rgb(12, 185, 53);
+    background-color: rgb(176, 233, 189);
     border: 1px solid rgb(5, 97, 42);
     border-radius: 10px;
     padding: 5px, 5px, 5px, 5px;
@@ -95,7 +96,7 @@ aside {
 }
 
 .channels_container {
-    background-color: rgb(230, 226, 173);
+    background-color: lightblue;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -113,7 +114,17 @@ aside {
 }
 
 .create_channel {
-    background-color: lightblue;
+
+    border: 1px solid rgb(5, 97, 42);
+    border-radius: 10px;
+    padding: 5px 20px;
+    margin-top: 10px;
+}
+
+p {
+    background-color: rgb(176, 233, 189);
+    text-align: center;
+    margin: 20px;
     border: 1px solid rgb(5, 97, 42);
     border-radius: 10px;
     padding: 5px 20px;
@@ -121,9 +132,8 @@ aside {
 }
 
 
-
 .messages {
-    background-color: rgb(230, 173, 173);
+    background-color: lightblue;
     font-size: 90%;
     height: 50vh;
     width: 90%;
@@ -134,59 +144,69 @@ aside {
     border-radius: 10px;
 }
 
-.messages_zone  {
+.messages_zone {
     display: flex;
-    flex-direction: column; 
-    align-items: center;    
+    flex-direction: column;
+    align-items: center;
+    margin-right: 30px;
+    margin-bottom: 50px;
 
-background-color: saddlebrown;
-height: 90%;
-width: 55%;}
+    background-color: lightblue;
+    height: 90%;
+    width: 100%;
+    box-shadow: 10px 10px 5px rgb(5, 97, 42, 0.3);
+}
 
 .formChat {
     display: flex;
-    flex-direction: row; 
-    align-items: center;    
+    flex-direction: row;
+    align-items: center;
     justify-content: space-between;
- 
-  
-    width: 100%; 
-height: auto;
-padding: 0 10px;
-    
+
+
+    width: 100%;
+    height: auto;
+    padding: 0 10px;
+
 }
 
 .formChat label {
 
-    font-size:16px; 
+    font-size: 16px;
     white-space: nowrap;
-    
 
-    }
+
+}
 
 .form_group {
-    margin-bottom: 10px;display: flex   ;
-    flex-direction: row;justify-content: space-between;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     width: 100%;
+    background-color: lightblue;
+    text-align: center;
 
-   
 
-  
-    
+
 }
+
 .formChat input {
-    padding: 10px; 
+    padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    width: 70%; 
+    width: 70%;
     box-sizing: border-box;
     height: 40px;
 }
-  button.send{
-    background-color: lightblue;
-    height: 40px; 
+
+button.send {
+
+    height: 40px;
     padding: 0 15px;
     width: auto;
+    position: relative;
+    bottom: -30px;
 
 
 }
@@ -196,11 +216,17 @@ padding: 0 10px;
         height: auto;
         margin-top: 10px;
     }
-.form_group {
-    flex-direction: column;
-    align-items: center;
-   
-}
+
+    .messages_zone {
+        margin-left: -1px;
+        width: 60vw;
+    }
+
+    .form_group {
+        flex-direction: column;
+        align-items: center;
+    }
+
     .containerWorkspace {
         flex-direction: column;
         align-items: flex-start;
@@ -220,14 +246,15 @@ padding: 0 10px;
 
 
 .formChat {
-    flex-direction: column; 
-    width: 100%;
+    flex-direction: column;
+    width: 90%;
 }
 
 .formChat label,
-.formChat input{
-    width: 100%; 
+.formChat input {
+    width: 100%;
     margin-bottom: 10px;
+    border-radius: 8px;
 }
 
 
@@ -236,9 +263,13 @@ padding: 0 10px;
         font-size: 5vw;
     }
 
+    .messages {
+        margin-left: 100px;
+    }
+.formChat{
+    margin-left: 50%;}
     button {
         font-size: 3vw;
         width: 5;
     }
 }
-

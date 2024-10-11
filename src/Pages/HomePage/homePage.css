@@ -1,28 +1,113 @@
-*{font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;  color: darkslategray;background-color: mediumturquoise;}
+* {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: darkslategray;
+  background-color: mediumturquoise;
+}
 
-h1,h2{background-color:lightblue;font-size: 20px}   
-h3{background-color:lightblue;font-size: 20px;}
-.scroll-container{overflow-y: auto;scrollbar-color: rgb(82, 83, 83) rgb(132, 211, 239);scroll-padding: 20px;height: 60vh;background-color: lightblue;}
+h1,
+h2 {
+  background-color: lightblue;
+  font-size: 20px
+}
 
-.container{display: flex; flex-direction: column; align-items: center; margin: auto; background-color: lightblue;height: 90vh;border-radius: 30px;max-width: 1000px;margin-top:30px ;}
-.workspaceList{background-color: lightblue; display: flex;flex-direction: row;justify-content: space-between; border: 1px solid rgb(5, 97, 42);border-radius: 10px;width: 80vh;height: 50px;padding: 5px;align-items: center;margin-top: 20px;}
-.workspace{background-color: lightblue;display: flex; flex-direction: column; align-items: center;height: 80vh;}
-.create{background-color: lightblue; border: 1px solid rgb(5, 97, 42); border-radius: 10px; padding: 5px 20px; margin-top: 10px; margin-bottom: 10px;position: relative;bottom: -10px ;}
-.button:hover{background-color: darkseagreen;}
-.enter {background-color: lightblue; border: 1px solid rgb(5, 97, 42); border-radius: 10px; padding: 5px 20px; width: 40px;height: 20px;font-size: small;text-decoration: none;font-weight: 700;}    
+h3 {
+  background-color: lightblue;
+  font-size: 20px;
+}
+
+.scroll-container {
+  overflow-y: auto;
+  scrollbar-color: rgb(82, 83, 83) rgb(132, 211, 239);
+  scroll-padding: 20px;
+  height: 60vh;
+  background-color: lightblue;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  background-color: lightblue;
+  height: 90vh;
+  border-radius: 30px;
+  max-width: 1000px;
+  margin-top: 30px;
+  box-shadow: 10px 10px 5px rgb(5, 97, 42, 0.3);
+}
+
+.workspaceList {
+  background-color: rgb(155, 215, 187);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border: 1px solid rgb(5, 97, 42);
+  border-radius: 10px;
+  width: 80vh;
+  height: 50px;
+  padding: 5px;
+  align-items: center;
+  margin-top: 20px;
+  box-shadow: 10px 10px 5px rgb(5, 97, 42, 0.3);
+}
+
+.workspace {
+  background-color: lightblue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 80vh;
+}
+
+.create {
+  background-color: lightblue;
+  border: 1px solid rgb(5, 97, 42);
+  border-radius: 10px;
+  padding: 5px 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  position: relative;
+  bottom: -10px;
+}
+
+label{background-color: rgb(130, 230, 234);}
+input{background-color: rgb(142, 231, 238);}
+.button:hover {
+  background-color: darkseagreen;
+}
+.button{background-color: rgb(147, 193, 247);
+box-shadow: 10px 10px 5px rgb(5, 97, 42, 0.3) ;}
+.enter {
+ 
+  border: 1px solid rgb(5, 97, 42);
+  border-radius: 10px;
+  padding: 5px 20px;
+  width: 40px;
+  height: 20px;
+  font-size: small;
+  text-decoration: none;
+  font-weight: 700;
+}
 
 
-@media (max-width: 320px) {
-    .workspaceList {
-      width: 200px;
-    }
-    h1,h2{font-size: 10px;}
-    h3{font-size: 10px;}
+@media (max-width: 319px) {
+  .workspaceList {
+    width: 200px;
   }
-  
-  @media (min-width: 321px) {
-    .workspaceList {
-        width: 315px;
-      }
-      
+
+  h1,
+  h2 {
+    font-size: 10px;
   }
+
+  h3 {
+    font-size: 10px;
+  }
+}
+
+@media (min-width: 320px) {
+  .workspaceList {
+    width: 315px;
+  }
+
+}

@@ -5,6 +5,7 @@ import './workspaceScreen.css'
 import RenderChats from '../../Components/RenderChats';
 
 
+
 const WorkspaceScreen = () => {
     const { workspace_id } = useParams()
     const navigator = useNavigate()
@@ -37,7 +38,7 @@ const WorkspaceScreen = () => {
             <header>
                 <h1 className='title'>{"Espacio de Trabajo: "
                     + workspace.workspaceTitle}</h1>
-                <button onClick={() => navigator('/')}>Salir</button>
+                <button className='button exit' onClick={() => navigator('/')}>Salir</button>
             </header>
             <div className='containerWorkspace'>
                 <aside key={workspace.id}>
@@ -72,7 +73,7 @@ const WorkspaceScreen = () => {
                     <form className='form formChat'>
 
                         <div className='form_group'>
-                            <label htmlFor="messagge">Ingrese su mensaje</label>
+                            <label htmlFor="messagge" className='label'>Ingrese su mensaje   </label>
                              <button className='button send'>Enviar</button>
                         </div>
 

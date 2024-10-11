@@ -8,7 +8,7 @@ export const initialWorkspaces =
             channelName: "General",
             messages: [{ id: 1, text: "Hola", author: "Marcelo" },
             { id: 2, text: "Como estas?", author: "Juan" },
-            { id: 3, text: "Todo bien?", author: "Marcelo" }]
+            { id: 3, text: "Todo bien. Estoy esperando para comenzar el trabajo.Ni bien lo haga, me comunicaré por WhatsApp", author: "Marcelo" }]
         },
         {
             id: 2,

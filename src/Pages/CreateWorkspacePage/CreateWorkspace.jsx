@@ -48,7 +48,7 @@ const CreateWorkspacePage = () => {
         <input type="text" placeholder='Entre 4 y 20 caracteres' name="workspace" id='workspaceTitle' /><br />
 
         <button className='button'>Crear</button>
-        <button type='button' className='button' onClick={handleCancel} ><a  href='/'>Cancelar</a></button>
+        <button type='button' className='button' onClick={handleCancel} >Cancelar</button>
 
       </form>
 
