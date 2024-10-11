@@ -14,7 +14,9 @@ h3 {
   background-color: lightblue;
   font-size: 20px;
 }
-
+ul {
+  background-color: lightblue;
+}
 .scroll-container {
   overflow-y: auto;
   scrollbar-color: rgb(82, 83, 83) rgb(132, 211, 239);
