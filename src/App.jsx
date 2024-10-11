@@ -3,7 +3,7 @@ import HomePage from './Pages/HomePage/homePage'
 import { Route, Routes } from 'react-router-dom'
 import CreateWorkspacePage from './Pages/CreateWorkspacePage/CreateWorkspace'
 import WorkspaceScreen from './Pages/WorkspaceScreen/WorkspaceScreen'
-import CreateChannel from './Pages/CreateChannelPage/createChannel'
+import CreateChannel from './Pages/CreateChannelPage/createChannel.jsx'
 
 
 function App() {
