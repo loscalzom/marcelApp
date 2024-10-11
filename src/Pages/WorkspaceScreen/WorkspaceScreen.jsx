@@ -9,6 +9,7 @@ const WorkspaceScreen = () => {
     const { workspace_id } = useParams()
     const navigator = useNavigate()
     const workspaces = getWorkspaces()
+ 
 
  const [selectedChannel, setSelectedChannel] = useState(null)
     const workspace = workspaces.find(ws => ws.id == workspace_id)
@@ -16,6 +17,7 @@ const WorkspaceScreen = () => {
    
 
     const handleChannelClick = (channel) => {
+       
       setSelectedChannel(channel)
       console.log("canal seleccionado",channel)
     }
