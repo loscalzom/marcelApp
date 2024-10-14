@@ -1,13 +1,17 @@
 import React from 'react';
+import '../CSS/renderChats.css';
 
 const RenderChats = ({ channel }) => {
 
- 
+
   return (
-    <div>
-      <h4># {channel.channelName}</h4>
+
+<div className='renderChatsContainer'>
+<h4># {channel.channelName}</h4>
+    <div className='renderChats'>
+      
       {channel.messages && channel.messages.length > 0 ? (
-        <ul>
+        <ul className='messages_list'>
           {channel.messages.map((message) => (
             <li key={message.id}>
               <strong>{message.author}: </strong> {message.text}
@@ -17,8 +21,8 @@ const RenderChats = ({ channel }) => {
       ) : (
         <p>No hay mensajes en este canal.</p>
       )}
-    </div>
-  );
-};
+    </div></div>
+  )
+}
 
 export default RenderChats;

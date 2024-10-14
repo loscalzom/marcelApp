@@ -23,12 +23,12 @@ const CreateChannel = () => {
             createChannel(newChannel, workspace_id)
             navigate(`/workspace/${workspace_id}`)
         }
-    };
+    }
 
     const handleCancel = (evento) => {
         evento.preventDefault()
         navigate(`/workspace/${workspace_id}`)
-    };
+    }
 
     return (
         <div className='container createWorspaceContainer'>

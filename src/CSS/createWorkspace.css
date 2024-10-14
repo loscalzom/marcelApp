@@ -1,6 +1,6 @@
 * {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  color: darkslategray;
+  color: rgb(79, 47, 47);
   background-color: mediumturquoise;
 }
 
@@ -34,6 +34,7 @@ label {
   border-radius: 5px;
   padding: 4px;
   width: auto;
+box-shadow: 10px 10px 5px rgb(5, 97, 42, 0.3) ;
 }
 
 input {
@@ -41,6 +42,7 @@ input {
   border-radius: 5px;
   padding: 4px;
   border: none;
+  box-shadow: 10px 10px 5px rgb(5, 97, 42, 0.3) ;
 }
 
 button {
@@ -57,9 +59,7 @@ button:hover {
   background-color: darkseagreen;
 }
 
-a {
-  text-decoration: none;
-}
+
 
 @media (max-width: 320px) {
   .createWorkspaceContainer {

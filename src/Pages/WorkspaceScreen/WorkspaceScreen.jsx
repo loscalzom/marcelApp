@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
 import { getWorkspaces, } from '../../data'
 import { useNavigate, useParams } from 'react-router-dom'
-import './workspaceScreen.css'
-import RenderChats from '../../Components/RenderChats';
+import '../../CSS/workspaceScreen.css'
+import RenderChats from '../../Components/RenderChats'
+import NewMessages from '../../Components/NewMessages'
+
 
 
 
@@ -36,7 +38,7 @@ const WorkspaceScreen = () => {
     return (
         <div className=' container workspaceContainer'>
             <header>
-                <h1 className='title'>{"Espacio de Trabajo: "
+                <h1 className='title'>{"Entorno de Trabajo: "
                     + workspace.workspaceTitle}</h1>
                 <button className='button exit' onClick={() => navigator('/')}>Salir</button>
             </header>
@@ -69,18 +71,9 @@ const WorkspaceScreen = () => {
                         )}
                     </div>
 
-
-                    <form className='form formChat'>
-
-                        <div className='form_group'>
-                            <label htmlFor="messagge" className='label'>Ingrese su mensaje   </label>
-                             <button className='button send'>Enviar</button>
-                        </div>
-
-                        <input id='messagge' type="text" />
-                    </form>
-
-
+                    <NewMessages channelId={selectedChannel?.id} />
+              
+                         
                 </div>
             </div>
         </div>

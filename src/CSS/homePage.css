@@ -1,13 +1,9 @@
-* {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  color: darkslategray;
-  background-color: mediumturquoise;
-}
 
 h1,
 h2 {
   background-color: lightblue;
   font-size: 20px
+  
 }
 
 h3 {

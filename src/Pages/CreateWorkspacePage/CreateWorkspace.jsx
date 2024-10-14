@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import './createWorkspace.css'
+import '../../CSS/createWorkspace.css'
 import { createWorkspace, getWorkspaces } from '../../data'
 import { useNavigate } from 'react-router-dom'
 
@@ -21,8 +21,7 @@ const CreateWorkspacePage = () => {
     } else {
       setError({ text: "", isError: false })
 
-      const nuevoWorkspace = { workspaceTitle: workspace }
-
+      const nuevoWorkspace = { workspaceTitle: workspace ,channels : []}
       createWorkspace(nuevoWorkspace)
       getWorkspaces()
       navigate('/')

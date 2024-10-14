@@ -1,5 +1,5 @@
 import React from 'react'
-import "./homePage.css"
+import "../../CSS/homePage.css"
 import WorkspacesListRender from '../../Components/WorkspacesListRender'
 import { useNavigate } from 'react-router-dom';
 

@@ -1,4 +1,5 @@
 import { v4 as uuidv4 } from "uuid"
+import RenderChats from "./Components/RenderChats"
 export const initialWorkspaces =
     [{
         id: 1,
@@ -50,24 +51,40 @@ const createWorkspace = (newWorkspace) => {
     let workspaces = getWorkspaces()
     workspaces.push(newWorkspace)
     localStorage.setItem("workspaces", JSON.stringify(workspaces))
-
 }
 
 
 const createChannel = (newChannel, workspaceId) => {
     newChannel.id = uuidv4()
     let workspaces = getWorkspaces()
-    const workspace = workspaces.find(ws => ws.id == workspaceId);
-    if (workspace) {
-        
-        workspace.channels.push(newChannel);
-        
-        
-        localStorage.setItem("workspaces", JSON.stringify(workspaces));
+    const workspace = workspaces.find(ws => ws.id == workspaceId)
+    workspace.channels.push(newChannel)
+    localStorage.setItem("workspaces", JSON.stringify(workspaces))
+}
+
+const sendMessage = (message, author, channelId) => {
+    let workspaces = getWorkspaces()
+    const workspace = workspaces.find(ws => ws.channels.some(ch => ch.id === channelId));
+    const channel = workspace.channels.find(ch => ch.id === channelId);
+
+    if (!channel.messages) {
+        channel.messages = []
     }
-} 
+
+    const newMessage = {
+        id: uuidv4(),
+        text: message,
+        author: author
+    }
+    channel.messages.push(newMessage)
+
+    localStorage.setItem("workspaces", JSON.stringify(workspaces))
+    
+}
 
 
 
 
-export { getWorkspaces, createWorkspace, createChannel }    
+
+
+export { getWorkspaces, createWorkspace, createChannel, sendMessage }    
