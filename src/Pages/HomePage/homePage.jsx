@@ -10,16 +10,18 @@ const HomePage = () => {
     navigate('/createWorkspace')
   }
   return (
-    <div className='container homePageContainer'>
+    <div className='homePageContainer'>
       <h1>Bienvenido a MarcelApp</h1>
       <div className='workspace '>
-        <h2>ENTORNOS DE TRABAJO</h2>
+        <h2 >Entornos de trabajo</h2>
         <div className='scroll-container'>
-          <h3><WorkspacesListRender /></h3>
+          <WorkspacesListRender />
         </div>
         <button onClick={handleButtonClick} className='button create'>Crear entorno</button>
-       
+
       </div>
+
+      
     </div>
   )
 }

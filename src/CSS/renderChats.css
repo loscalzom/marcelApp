@@ -1,4 +1,4 @@
-.renderChats {
+/* .renderChats {
     background-color: rgb(76, 182, 208);
     border-radius: 5px;
 
@@ -20,6 +20,7 @@ h4 {
 
 li {
     background-color: rgb(76, 182, 208);
+    list-style: none;
 }
 
 strong {
@@ -35,4 +36,4 @@ strong {
         height: 20%;
     }
 
-}
+} */

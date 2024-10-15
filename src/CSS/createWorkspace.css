@@ -1,20 +1,17 @@
-* {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  color: rgb(79, 47, 47);
-  background-color: mediumturquoise;
+/* * {
+  font-family:   "Lato", sans-serif;
+ 
 }
-
-h2 {
-  background-color: lightblue;
-  font-size: 20px
-}
+h2{color: white;
+font-weight: 500;
+font-size: 20px;}
 
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: auto;
-  background-color: lightblue;
+  background-color:rgba(131,56,138, 1);
   height: 90vh;
   border-radius: 30px;
   max-width: 1000px;
@@ -22,14 +19,21 @@ h2 {
 }
 
 .form {
-  background-color: lightblue;
+  background-color:rgba(234,189,251, 1);
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 80vh;
+  height:70vh;
+  width: 55vw;
+  border-radius: 10px;
 }
 
+
 label {
+  background-color: white;
+  font-size: 20px;
+  font-weight: 400;
+  color: rgb(119, 21, 114); 
   margin-top: 50px;
   border-radius: 5px;
   padding: 4px;
@@ -38,15 +42,21 @@ box-shadow: 10px 10px 5px rgb(5, 97, 42, 0.3) ;
 }
 
 input {
-  margin-top: 10px;
+  background-color:white;
+  font-size: 15px;
+  font-weight: 400  ;
+  color: rgb(119, 21, 114);  margin-top: 10px;
   border-radius: 5px;
   padding: 4px;
   border: none;
   box-shadow: 10px 10px 5px rgb(5, 97, 42, 0.3) ;
 }
 
+
+
+
 button {
-  border: 1px solid rgb(5, 97, 42);
+  border: 1px solid rgb(200, 75, 138);
   border-radius: 10px;
   padding: 5px 20px;
   margin-top: 10px;
@@ -55,33 +65,24 @@ button {
   bottom: -10px;
 }
 
-button:hover {
-  background-color: darkseagreen;
+
+@media (max-width: 560px) {
+
+label{width:50vw;
+font-size: 12px;
+text-align: center;}
+
+
 }
 
 
-
-@media (max-width: 320px) {
+@media (max-width: 360px) {
   .createWorkspaceContainer {
     width: 200px;
   }
 
   h2 {
-    font-size: 10px;
+    font-size: 15px;
   }
 }
-
-@media (min-width: 321px) {
-  .createWorkspaceContainer {
-    width: 315px;
-  }
-
-  .messages_zone {
-    margin-top: 50px;
-    margin-left: 20%;
-  }
-
-  .label {
-    max-width: 80%;
-  }
-}
+ */

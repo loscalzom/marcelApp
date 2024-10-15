@@ -64,8 +64,8 @@ const createChannel = (newChannel, workspaceId) => {
 
 const sendMessage = (message, author, channelId) => {
     let workspaces = getWorkspaces()
-    const workspace = workspaces.find(ws => ws.channels.some(ch => ch.id === channelId));
-    const channel = workspace.channels.find(ch => ch.id === channelId);
+    const workspace = workspaces.find(ws => ws.channels.some(ch => ch.id === channelId))
+    const channel = workspace.channels.find(ch => ch.id === channelId)
 
     if (!channel.messages) {
         channel.messages = []
