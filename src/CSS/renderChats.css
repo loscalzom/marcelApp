@@ -1,30 +1,33 @@
-/* .renderChats {
-    background-color: rgb(76, 182, 208);
-    border-radius: 5px;
 
-    color: dimgray;
-
-}
-
-h4 {
-    background-color: rgb(76, 182, 208);
-}
 .renderChatsContainer {
-    background-color: rgb(76, 182, 208);
+    background-color: white;
     border-radius: 5px;
     box-shadow: 10px 10px 5px rgb(5, 97, 42, 0.3);
-    color: dimgray;
+ 
     max-height: 100%;
 }
 
 
+
+.messages_list{
+    background-color: white;
+box-shadow: none;
+align-items: flex-start;}
+
 li {
-    background-color: rgb(76, 182, 208);
+    background-color:white;
     list-style: none;
+    
+    font-weight: 400;
+
+    
 }
 
+
+
 strong {
-    background-color: rgb(76, 182, 208);
+    background-color: white;
+    font-weight: 600;
 }
 
 @media (max-width: 380px) {
@@ -36,4 +39,4 @@ strong {
         height: 20%;
     }
 
-} */
+} 

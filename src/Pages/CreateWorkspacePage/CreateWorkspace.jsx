@@ -2,15 +2,10 @@ import React, { useState } from 'react'
 import '../../CSS/createWorkspace.css'
 import { createWorkspace, getWorkspaces } from '../../data'
 import { useNavigate } from 'react-router-dom'
-
-
 const CreateWorkspacePage = () => {
-
   const [error, setError] = useState({ text: "", isError: false })
   const navigate = useNavigate()
-
   const handleSubmit = (evento) => {
-
     evento.preventDefault()
 
     const formulario = new FormData(evento.target)
@@ -35,22 +30,14 @@ const CreateWorkspacePage = () => {
 
   return (
     <div className='container createWorspaceContainer'>
-
       <h2>Crear entorno de trabajo</h2>
-
       <form onSubmit={handleSubmit} className='form'>
-
         <label htmlFor="workspaceTitle">Ingrese el nombre del entorno</label> <br />
         {error.isError && <p>{error.text}</p>}
-
-
         <input type="text" placeholder='Entre 4 y 20 caracteres' name="workspace" id='workspaceTitle' /><br />
-
         <button className='button'>Crear</button>
         <button type='button' className='button' onClick={handleCancel} >Cancelar</button>
-
       </form>
-
     </div>
   )
 }
