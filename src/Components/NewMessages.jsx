@@ -1,12 +1,6 @@
-import React, { useEffect, useState } from 'react'
+import React, {  useEffect, useState } from 'react'
 import { sendMessage } from '../data'
 import '../CSS/workspaceScreen.css'
-import RenderChats from './RenderChats'
-
-
-
-
-
 
 const NewMessages = ({ channelId }) => {
     const [text, setText] = useState('')
@@ -22,8 +16,7 @@ const NewMessages = ({ channelId }) => {
 
         sendMessage(text, author, channelId)
         setText('')
-       
-    }
+        }
 
     return (
         <div className='newMessages'>
@@ -37,7 +30,7 @@ const NewMessages = ({ channelId }) => {
                 <button className='sendMessage' type="submit">Enviar</button>
 
             </form>
-            </div >
-            );
+        </div >
+    );
 }
-            export default NewMessages
+export default NewMessages

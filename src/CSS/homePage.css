@@ -89,13 +89,9 @@ ul {
   width: 15px;
 }
 
-
-
 .scroll-container::-webkit-scrollbar-track {
   background-color:  #641e6a;
 }
-
-
 
 .scroll-container::-webkit-scrollbar-thumb {
   background-color: rgba(131, 56, 138, 1);
@@ -103,13 +99,9 @@ ul {
   border: 2px solid #ccc; 
 }
 
-
-
 .scroll-container::-webkit-scrollbar-thumb:hover {
   background-color: #671d6c;
 }
-
-
 
 .workspaceList {
   display: flex;
@@ -140,7 +132,6 @@ ul {
 }
 
 .enter {
-
   border: 1px solid rgba(131, 56, 138, 1);
   border-radius: 10px;
   padding: 5px 20px;

@@ -18,10 +18,7 @@ const HomePage = () => {
           <WorkspacesListRender />
         </div>
         <button onClick={handleButtonClick} className='button create'>Crear entorno</button>
-
       </div>
-
-      
     </div>
   )
 }

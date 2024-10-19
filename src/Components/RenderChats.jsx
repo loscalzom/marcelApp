@@ -1,8 +1,6 @@
-import React from 'react';
 import '../CSS/renderChats.css';
 
 const RenderChats = ({ channel }) => {
-
 
   return (
 
@@ -25,4 +23,4 @@ const RenderChats = ({ channel }) => {
   )
 }
 
-export default RenderChats;
+export default RenderChats

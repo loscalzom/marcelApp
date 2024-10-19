@@ -7,8 +7,6 @@
     max-height: 100%;
 }
 
-
-
 .messages_list{
     background-color: white;
 box-shadow: none;
@@ -19,11 +17,8 @@ li {
     list-style: none;
     
     font-weight: 400;
-
     
 }
-
-
 
 strong {
     background-color: white;

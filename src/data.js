@@ -1,5 +1,4 @@
 import { v4 as uuidv4 } from "uuid"
-import RenderChats from "./Components/RenderChats"
 export const initialWorkspaces =
     [{
         id: 1,
@@ -24,13 +23,13 @@ export const initialWorkspaces =
     {
         id: 2,
         workspaceTitle: "Consultas",
-        channels: [{ id: 1, channelName: "General" }, { id: 2, channelName: "Calendario" }, { id: 3, channelName: "Tareas" }],
+        channels: [{ id: 4, channelName: "General" }, { id: 5, channelName: "Calendario" }, { id: 6, channelName: "Tareas" }],
     },
 
     {
         id: 3,
         workspaceTitle: "Propuestas",
-        channels: [{ id: 1, channelName: "General" }, { id: 2, channelName: "Calendario" }, { id: 3, channelName: "Tareas" }],
+        channels: [{ id: 7, channelName: "General" }, { id: 8, channelName: "Calendario" }, { id: 9, channelName: "Tareas" }],
     },
 
     ]
@@ -79,12 +78,8 @@ const sendMessage = (message, author, channelId) => {
     channel.messages.push(newMessage)
 
     localStorage.setItem("workspaces", JSON.stringify(workspaces))
-    
+
 }
-
-
-
-
 
 
 export { getWorkspaces, createWorkspace, createChannel, sendMessage }    

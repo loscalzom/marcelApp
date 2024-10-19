@@ -5,35 +5,22 @@ import '../../CSS/workspaceScreen.css'
 import RenderChats from '../../Components/RenderChats'
 import NewMessages from '../../Components/NewMessages'
 
-
-
-
 const WorkspaceScreen = () => {
     const { workspace_id } = useParams()
     const navigator = useNavigate()
     const workspaces = getWorkspaces()
 
-
     const [selectedChannel, setSelectedChannel] = useState(null)
     const workspace = workspaces.find(ws => ws.id == workspace_id)
-
-
-
     const handleChannelClick = (channel) => {
 
         setSelectedChannel(channel)
-        console.log("canal seleccionado", channel)
     }
 
-
     const navigate = useNavigate();
-
     const handleButtonClick = () => {
         navigate('../createWorkspace')
     }
-
-
-
 
     return (
         <div className=' container workspaceContainer'>
@@ -46,7 +33,6 @@ const WorkspaceScreen = () => {
                 <aside key={workspace.id}>
                     <h3>Canales</h3>
                     <div className='channels_container'>
-
                         <div className='channels'>
                             {workspace.channels && workspace.channels.length > 0 ? (
                                 workspace.channels.map(channel => (
@@ -61,7 +47,6 @@ const WorkspaceScreen = () => {
                         <button className='button create_channel' onClick={() => navigate(`/workspace/${workspace.id}/createChannel`)}>Crear canal</button>
                     </div>
                 </aside>
-
                 <div className='messages_zone'>
                     <div className='messages'>
                         {selectedChannel ? (
@@ -70,10 +55,7 @@ const WorkspaceScreen = () => {
                             <p>Selecciona un canal para ver los mensajes</p>
                         )}
                     </div>
-
                     <NewMessages channelId={selectedChannel?.id} />
-              
-                         
                 </div>
             </div>
         </div>
