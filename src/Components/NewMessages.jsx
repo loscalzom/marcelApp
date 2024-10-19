@@ -1,22 +1,20 @@
-import React, {  useEffect, useState } from 'react'
+import React, {  useState } from 'react'
 import { sendMessage } from '../data'
 import '../CSS/workspaceScreen.css'
 
-const NewMessages = ({ channelId }) => {
+const NewMessages = ({ channelId,newMessageSent }) => {
     const [text, setText] = useState('')
     const author = "Yo"
 
     const handleSubmit = (evento) => {
         evento.preventDefault()
 
-        if (typeof channelId !== 'string' && typeof channelId !== 'number') {
-            console.error("El channelId no es válido:", channelId)
-            return
-        }
-
         sendMessage(text, author, channelId)
         setText('')
-        }
+
+        if (newMessageSent) {
+            newMessageSent()
+        }}
 
     return (
         <div className='newMessages'>
@@ -31,6 +29,6 @@ const NewMessages = ({ channelId }) => {
 
             </form>
         </div >
-    );
+    )
 }
 export default NewMessages

@@ -1,3 +1,4 @@
+import { useState } from "react"
 import { v4 as uuidv4 } from "uuid"
 export const initialWorkspaces =
     [{
@@ -52,7 +53,6 @@ const createWorkspace = (newWorkspace) => {
     localStorage.setItem("workspaces", JSON.stringify(workspaces))
 }
 
-
 const createChannel = (newChannel, workspaceId) => {
     newChannel.id = uuidv4()
     let workspaces = getWorkspaces()
@@ -69,7 +69,7 @@ const sendMessage = (message, author, channelId) => {
     if (!channel.messages) {
         channel.messages = []
     }
-
+  
     const newMessage = {
         id: uuidv4(),
         text: message,

@@ -17,6 +17,15 @@ const WorkspaceScreen = () => {
         setSelectedChannel(channel)
     }
 
+    const handleNewMessage = () => {
+
+        const updatedWorkspaces = getWorkspaces();
+        const updatedWorkspace = updatedWorkspaces.find(ws => ws.id == workspace_id);
+        const updatedChannel = updatedWorkspace.channels.find(ch => ch.id === selectedChannel.id);
+
+        setSelectedChannel(updatedChannel)
+    }
+
     const navigate = useNavigate();
     const handleButtonClick = () => {
         navigate('../createWorkspace')
@@ -55,11 +64,11 @@ const WorkspaceScreen = () => {
                             <p>Selecciona un canal para ver los mensajes</p>
                         )}
                     </div>
-                    <NewMessages channelId={selectedChannel?.id} />
+                    <NewMessages channelId={selectedChannel?.id} newMessageSent={handleNewMessage} />
                 </div>
             </div>
         </div>
     )
 }
 
-export default WorkspaceScreen;
+export default WorkspaceScreen

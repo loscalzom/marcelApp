@@ -4,7 +4,7 @@ import WorkspacesListRender from '../../Components/WorkspacesListRender'
 import { useNavigate } from 'react-router-dom';
 
 const HomePage = () => {
-  const navigate = useNavigate();
+  const navigate = useNavigate()
 
   const handleButtonClick = () => {
     navigate('/createWorkspace')
